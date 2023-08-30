@@ -5,12 +5,12 @@ router = APIRouter()
 # Criar as rotas/endpoints: GET, POST, PUT, DELETE
 
 @router.get("/funcionario/", tags=["Funcionário"])
-def get_funcionario():
-    return {"msg": "get todos executado"}, 200
+def get_funcionario(f: Funcionario):
+    return {"msg": "get todos executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 200
 
 @router.get("/funcionario/{id}", tags=["Funcionário"])
-def get_funcionario(id: int):
-    return {"msg": "get um executado"}, 200
+def get_funcionario(id: int, f: Funcionario):
+    return {"msg": "get um executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 200
 
 @router.post("/funcionario/", tags=["Funcionário"])
 def post_funcionario(f: Funcionario):
@@ -21,5 +21,5 @@ def put_funcionario(id: int, f: Funcionario):
     return {"msg": "put executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 201
 
 @router.delete("/funcionario/{id}", tags=["Funcionário"])
-def delete_funcionario(id: int):
-    return {"msg": "delete executado"}, 201
+def delete_funcionario(id: int, f:Funcionario):
+    return {"msg": "delete executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 201
