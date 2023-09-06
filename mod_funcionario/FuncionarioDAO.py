@@ -65,7 +65,8 @@ def delete_funcionario(id: int):
         dados = session.query(FuncionarioDB).filter(FuncionarioDB.id_funcionario == id).one()
         session.delete(dados)
         session.commit()
-        return {"id": dados.id_funcionario}, 200
+        return {"id": dados.id_funcionario,
+                "Funcionario deletado": dados.nome}, 200
     except Exception as e:
         session.rollback()
         return {"erro": str(e)}, 400
