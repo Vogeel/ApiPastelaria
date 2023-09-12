@@ -2,6 +2,7 @@
 GET http://localhost:8000/funcionario/ HTTP/1.1
 
 ### Verbo GET – listar um
+<<<<<<< Updated upstream
 GET http://localhost:8000/funcionario/10 HTTP/1.1
 content-type: application/json
 
@@ -36,10 +37,36 @@ content-type: application/json
     "nome" : "Bolinhas dos Testes",
     "cpf" : "12345678909",
     "telefone" : "49898989",
+=======
+GET http://localhost:8000/funcionario/6 HTTP/1.1 #consultar, numero depois do funcionario = id 
+
+
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/funcionario/ HTTP/1.1 #inserir
+content-type: application/json
+
+{
+    "nome" : "hh",
+    "cpf" : "hh",
+    "telefone" : "hh",
+    "senha" : "hh",
+    "matricula" : "hh",
+    "grupo" : 2
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/funcionario/6 HTTP/1.1 #Editar 
+content-type: application/json
+
+{
+    "nome" : "Bolinhas Testes",
+    "cpf" : "01923g756",
+    "telefone" : "49f98989",
+>>>>>>> Stashed changes
     "senha" : "abc",
-    "matricula" : "54321",
+    "matricula" : "54121",
     "grupo" : 2
 }
 
 ### Verbo DELETE - excluir
-DELETE http://127.0.0.1:8000/funcionario/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/funcionario/6 HTTP/1.1
