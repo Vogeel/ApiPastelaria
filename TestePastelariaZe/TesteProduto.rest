@@ -2,19 +2,17 @@
 GET http://localhost:8000/produto/ HTTP/1.1
 
 ### Verbo GET – listar um
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 GET http://localhost:8000/produto/10 HTTP/1.1
 content-type: application/json
 =======
 GET http://localhost:8000/produto/2 HTTP/1.1
 >>>>>>> Stashed changes
+=======
+GET http://localhost:8000/produto/1 HTTP/1.1
+>>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
 
-{
-    "id" : 1,
-    "nome" : "coca-cola",
-    "descricao" : "600ml",
-    "valor_unitario" : 5
-}
 
 ### Verbo POST – adicionar
 POST http://127.0.0.1:8000/produto/ HTTP/1.1
@@ -38,8 +36,12 @@ content-type: application/json
 }
 
 ### Verbo DELETE - excluir
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 DELETE http://127.0.0.1:8000/produto/3 HTTP/1.1
 =======
 DELETE http://127.0.0.1:8000/produto/2 HTTP/1.1
 >>>>>>> Stashed changes
+=======
+DELETE http://127.0.0.1:8000/produto/1 HTTP/1.1
+>>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
