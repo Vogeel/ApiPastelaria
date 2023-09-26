@@ -1,17 +1,6 @@
 ### Verbo GET – listar todos
 GET http://localhost:8000/pr/ HTTP/1.1
 
-### Verbo GET – listar um
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-GET http://localhost:8000/cliente/10 HTTP/1.1
-content-type: application/json
-=======
-GET http://localhost:8000/cliente/5 HTTP/1.1
->>>>>>> Stashed changes
-=======
-GET http://localhost:8000/cliente/1 HTTP/1.1
->>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
 
 
 ### Verbo POST – adicionar
@@ -19,40 +8,18 @@ POST http://127.0.0.1:8000/cliente/ HTTP/1.1
 content-type: application/json
 
 {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
     "nome" : "Cliente da silva",
     "cpf" : "01923874656",
     "telefone" : "49988234567",
     "senha" : "bolinhas",
-=======
-    "nome" : "Cliente 3",
-    "cpf" : "00000000000",
-    "telefone" : "00000000000",
->>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
     "comprar_fiado" : false,
     "dia_fiado" : 0,
     "senha" : "ffff"
 }
 
 ### Verbo PUT – atualiza
-<<<<<<< HEAD
-PUT http://127.0.0.1:8000/cliente/2 HTTP/1.1
-=======
-    "nome" : "Cliente 6",
-    "cpf" : "12345676319",
-    "telefone" : "12445678909",
-    "comprar_fiado" : true,
-    "dia_fiado" : 5,
-    "senha" : "fffaa"
-}
 
-### Verbo PUT – atualiza
-PUT http://127.0.0.1:8000/cliente/5 HTTP/1.1
->>>>>>> Stashed changes
-=======
 PUT http://127.0.0.1:8000/cliente/1 HTTP/1.1
->>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
 content-type: application/json
 
 {
@@ -64,13 +31,5 @@ content-type: application/json
     "dia_fiado" : 2
 }
 
-### Verbo DELETE - excluir
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 DELETE http://127.0.0.1:8000/cliente/3 HTTP/1.1
-=======
-DELETE http://127.0.0.1:8000/cliente/5 HTTP/1.1
->>>>>>> Stashed changes
-=======
-DELETE http://127.0.0.1:8000/cliente/1 HTTP/1.1
->>>>>>> 3e17ce68dcd7ece5ed497b87444233ca0434383f
+
