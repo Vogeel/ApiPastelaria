@@ -1,8 +1,8 @@
 from pydantic import BaseModel
 
 class Produto(BaseModel):
-    id_produto: int = None
+    id_produto: int
     nome: str
     descricao: str
-    foto: bytes = None
+    foto: bytes
     valor_unitario: float

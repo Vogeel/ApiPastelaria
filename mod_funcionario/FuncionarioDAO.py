@@ -11,8 +11,17 @@ router = APIRouter( dependencies=[Depends(security.verify_token), Depends(securi
 # Criar as rotas/endpoints: GET, POST, PUT, DELETE
 
 @router.get("/funcionario/", tags=["Funcionário"])
-def get_funcionario(f: Funcionario):
-     return {"msg": "get todos executado", "id": id, "nome": f.nome, "cpf": f.cpf, "telefone": f.telefone}, 200
+def get_funcionario():
+    try:
+        session = db.Session()
+        dados = session.query(FuncionarioDB).all()
+        return dados, 200
+    
+    except Exception as e:
+        return {"erro:": str(e)}, 400
+    finally:
+        session.close()
+    
 
 @router.get("/funcionario/{id}", tags=["Funcionário"])
 def get_funcionario(id: int):

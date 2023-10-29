@@ -13,13 +13,21 @@ router = APIRouter( dependencies=[Depends(security.verify_token), Depends(securi
 
 @router.get("/cliente/", tags=["Cliente"])
 def get_cliente():
-    return {"msg": "get todos executado"}, 200
+    try:
+        session = db.Session()
+        dados = session.query(ClienteDB).all()
+        return dados, 200
+    
+    except Exception as e:
+        return {"erro:": str(e)}, 400
+    finally:
+        session.close()
 
 @router.get("/cliente/{id}", tags=["Cliente"])
 def get_cliente(id: int):
     try:
         session = db.Session()
-        dados = session.query(ClienteDB).filter(ClienteDB.id_clinete == id).all()
+        dados = session.query(ClienteDB).filter(ClienteDB.id_cliente == id).all()
         return dados, 200
     except Exception as e: 
         return {"erro": str(e)}, 400
@@ -33,7 +41,7 @@ def post_cliente(corpo: Cliente):
         dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone, corpo.comprar_fiado, corpo.dia_fiado, corpo.senha)
         session.add(dados)
         session.commit()
-        return {"id": dados.id_clinete}, 200
+        return {"id": dados.id_cliente}, 200
     except Exception as e:
         session.rollback()
         return {"erro": str(e)}, 400
@@ -45,7 +53,7 @@ def post_cliente(corpo: Cliente):
 def put_cliente(id: int, corpo: Cliente):
     try:
         session = db.Session()
-        dados = session.query(ClienteDB).filter(ClienteDB.id_clinete == id).one()
+        dados = session.query(ClienteDB).filter(ClienteDB.id_cliente == id).one()
         dados.nome = corpo.nome
         dados.cpf = corpo.cpf
         dados.telefone  =corpo.telefone
@@ -54,7 +62,7 @@ def put_cliente(id: int, corpo: Cliente):
         dados.senha = corpo.senha
         session.add(dados)
         session.commit()
-        return {"id": dados.id_clinete}, 200
+        return {"id": dados.id_cliente}, 200
     except Exception as e:
         session.rollback()
         return{"erro": str(e)}, 400
@@ -65,10 +73,10 @@ def put_cliente(id: int, corpo: Cliente):
 def delete_cliente(id: int):
     try:
         session = db.Session()
-        dados = session.query(ClienteDB).filter(ClienteDB.id_clinete == id).one()
+        dados = session.query(ClienteDB).filter(ClienteDB.id_cliente == id).one()
         session.delete(dados)
         session.commit()
-        return {"id": dados.id_clinete,
+        return {"id": dados.id_cliente,
                 "nome do cliente deletado": dados.nome},200
     except Exception as e:
         session.rollback()
