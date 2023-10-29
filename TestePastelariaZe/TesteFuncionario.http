@@ -16,11 +16,11 @@ x-key: abcBolinhasKey
 
 {
     "nome" : "hh",
+    "matricula" : "hh",
     "cpf" : "hh",
     "telefone" : "hh",
-    "senha" : "hh",
-    "matricula" : "hh",
-    "grupo" : 2
+    "grupo" : 2,
+    "senha" : "hh"
 }
 
 ### Verbo PUT  atualiza
@@ -39,6 +39,6 @@ x-key: abcBolinhasKey
 }
 
 ### Verbo DELETE - excluir
-DELETE http://127.0.0.1:8000/funcionario/6 HTTP/1.1
+DELETE http://127.0.0.1:8000/funcionario/16 HTTP/1.1
 x-token: abcBolinhasToken
 x-key: abcBolinhasKey

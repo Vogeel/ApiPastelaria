@@ -34,7 +34,7 @@ x-key: abcBolinhasKey
 
 ### Verbo DELETE - excluir
 
-DELETE http://127.0.0.1:8000/produto/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/produto/16 HTTP/1.1
 x-token: abcBolinhasToken
 x-key: abcBolinhasKey
 

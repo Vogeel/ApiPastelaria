@@ -2,7 +2,7 @@
 GET http://localhost:8000/pr/ HTTP/1.1
 
 ### Verbo GET – listar um
-GET http://localhost:8000/cliente/3 HTTP/1.1
+GET http://localhost:8000/cliente/7 HTTP/1.1
 x-token: abcBolinhasToken
 x-key: abcBolinhasKey
 
@@ -57,7 +57,7 @@ x-key: abcBolinhasKey
 
 ### Verbo DELETE - excluir
 
-DELETE http://127.0.0.1:8000/cliente/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/cliente/6 HTTP/1.1
 x-token: abcBolinhasToken
 x-key: abcBolinhasKey
 
