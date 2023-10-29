@@ -11,7 +11,7 @@ router = APIRouter( dependencies=[Depends(security.verify_token), Depends(securi
 
 # Criar as rotas/endpoints: GET, POST, PUT, DELETE
 
-@router.get("/cliente/", tags=["Cliente"])
+@router.get("/cliente/", tags=["Cliente"]) 
 def get_cliente():
     try:
         session = db.Session()
