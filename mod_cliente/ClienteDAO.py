@@ -57,7 +57,7 @@ def put_cliente(id: int, corpo: Cliente):
         dados.nome = corpo.nome
         dados.cpf = corpo.cpf
         dados.telefone  =corpo.telefone
-        dados.compra_fiado = corpo.comprar_fiado
+        dados.comprar_fiado = corpo.comprar_fiado
         dados.dia_fiado = corpo.dia_fiado
         dados.senha = corpo.senha
         session.add(dados)

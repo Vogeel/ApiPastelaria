@@ -18,7 +18,7 @@ content-type: application/json
     "nome" : "Cliente da silvaffg",
     "cpf" : "01923873656",
     "telefone" : "49288234567",
-    "comprar_fiado" : false,
+    "comprar_fiado" : 2,
     "dia_fiado" : 0,
     "senha" : "bolinhas"
 
@@ -34,7 +34,7 @@ x-key: abcBolinhasKey
     "nome" : "Cliente 75",
     "cpf" : "12345676019",
     "telefone" : "12425678909",
-    "comprar_fiado" : true,
+    "comprar_fiado" : 2,
     "dia_fiado" : 5,
     "senha" : "fffaa"
 }
@@ -51,7 +51,7 @@ x-key: abcBolinhasKey
     "cpf" : "1233214565",
     "telefone" : "1233215665",
     "senha" : "abc",
-    "comprar_fiado" : true,
+    "comprar_fiado" : 5,
     "dia_fiado" : 2
 }
 
