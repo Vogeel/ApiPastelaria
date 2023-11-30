@@ -1,5 +1,5 @@
 import db
-from sqlalchemy import Column, VARCHAR, CHAR, Integer, BOOLEAN
+from sqlalchemy import Column, VARCHAR, CHAR, Integer
 
 class ClienteDB(db.Base):
 
@@ -9,16 +9,16 @@ class ClienteDB(db.Base):
     nome = Column(VARCHAR(100), nullable=False)
     cpf = Column(CHAR(11),unique=True, nullable=False)
     telefone = Column(CHAR(11), unique=True, nullable=False)
-    compra_fiado  = Column(BOOLEAN, nullable=False)
+    comprar_fiado  = Column(Integer, nullable=False)
     dia_fiado = Column(Integer, nullable=True)
     senha = Column(VARCHAR(200), nullable=False)
 
-    def __init__(self, id_cliente, nome, cpf, telefone, compra_fiado, dia_fiado, senha):
+    def __init__(self, id_cliente, nome, cpf, telefone, comprar_fiado, dia_fiado, senha):
         self.id_cliente = id_cliente
         self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
-        self.compra_fiado = compra_fiado
+        self.comprar_fiado = comprar_fiado
         self.dia_fiado = dia_fiado
         self.senha = senha
 

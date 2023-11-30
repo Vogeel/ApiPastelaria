@@ -20,16 +20,16 @@ x-key: abcBolinhasKey
 }
 
 ### Verbo PUT – atualiza
-PUT http://127.0.0.1:8000/produto/2 HTTP/1.1
+PUT http://127.0.0.1:8000/produto/1 HTTP/1.1
 content-type: application/json
 x-token: abcBolinhasToken
 x-key: abcBolinhasKey
 
 {
-    "id": 1,
-    "nome" : "kuat",
+    "nome" : "guaranas",
+    "foto" : "string",
     "descricao" : "600ml",
-    "valor_unitario" : 5
+    "valor_unitario" : 1.0
 }
 
 ### Verbo DELETE - excluir

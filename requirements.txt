@@ -2,10 +2,14 @@ annotated-types==0.5.0
 anyio==3.7.1
 click==8.1.7
 colorama==0.4.6
+defusedxml==0.7.1
 fastapi==0.103.0
+fonttools==4.45.1
+fpdf2==2.7.6
 greenlet==2.0.2
 h11==0.14.0
 idna==3.4
+Pillow==10.1.0
 pydantic==2.3.0
 pydantic_core==2.6.3
 python-dotenv==1.0.0

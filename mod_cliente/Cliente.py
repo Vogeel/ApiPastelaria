@@ -6,6 +6,6 @@ class Cliente(BaseModel):
     nome: str
     cpf: str
     telefone: str 
-    comprar_fiado: bool = None
+    comprar_fiado: int = None
     dia_fiado: int = None
     senha: str = None
